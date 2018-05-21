@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+        
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- CSS Styling-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    <!-- Leap SDK-->
+    <script src="{{ url_for('static', filename='leap-0.6.3.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='leap-plugins-0.1.8.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='util.js') }}"></script>
+
+    <!-- AJAX-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- App code -->
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+
+    </head>
+    
+
+    <audio id="win_sound">
+        <source src="{{ url_for('static', filename='win_sound.wav') }}" type="audio/wav">
+    </audio>
+    <audio id="miss_sound">
+        <source src="{{ url_for('static', filename='miss_sound.wav') }}" type="audio/wav">
+    </audio>
+    <audio id="new_char_sound">
+        <source src="{{ url_for('static', filename='new_char_sound.wav') }}" type="audio/wav">
+    </audio>
+
+    <body>
+        <div class = "container">
+            <div class="left_col">
+                <img src="{{ url_for('static', filename='logo.png') }}" id='logo'></img>
+                <button class="menu_buttons" id="practice_btn">Practice</button>
+                <button class="menu_buttons" id="test_btn">Test</button>
+
+                <input id="checkBox" type="checkbox">Test Learned Char Only?</input>
+                <div id="score_container">
+                    <div>Score</div>
+                    <div id="score">-</div>
+                </div>
+            </div>
+
+            <div class='right_col'>
+
+                
+                <div id="display_char">
+                </div>
+
+                <div id="board_container">
+                    <canvas id="board" width=750 height=750>
+                    </canvas>
+                    <img src="{{ url_for('static', filename='brush.png') }}" id="cursor">
+                    </img>
+                </div>
+  
+
+                <div class = "debug">
+                    <button id="save_btn">Save User Data</button>
+                    <div id="rawdata">Raw Hand Data</div>
+                </div> 
+
+            </div>
+        </div>
+
+
+    </body>
+</html>                                                             

@@ -1,0 +1,170 @@
+
+#cursor{
+    
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+
+
+.container {
+    display: flex; /* or inline-flex */
+    flex-direction: row ;
+
+    height: 1000px;
+  }
+
+.right_col{
+    display: flex;
+    width: 1000px;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.left_col{
+    border-right:2px solid;
+    width: 3in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+#char{
+    
+    position:relative;
+
+    /*left: 0px;*/
+
+}
+
+#board{
+    
+    position: relative;;
+    /*top: 0px;
+    left: 0px;*/
+
+}
+
+.img_clear{
+    width: 25%;
+}
+
+.img_blur{
+    width: 25%;
+    filter: blur(5px);
+}
+
+/*Font stuff*/
+.title_text{
+
+    font-size: 100%;
+}
+
+/*Display Styles*/
+
+#display_char{
+}
+
+
+
+.char_grid{
+    width: 20%;
+}
+
+/*Menu Styles*/
+
+#logo{
+
+    width: 100%;
+}
+.menu_buttons{
+    margin: 0.1in;
+    border-radius: 28px;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 37px;
+    background: #d93434;
+    padding: 11px 16px 10px 20px;
+    text-decoration: none;    
+    width: 80%;
+}
+.menu_buttons_active{
+    margin: 0.1in;
+    border-radius: 28px;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 37px;
+    background: green;
+    padding: 11px 16px 10px 20px;
+    text-decoration: none;    
+    width: 80%;
+}
+.menu_buttons:hover {
+    background: #000000;
+    text-decoration: none;
+  }
+
+
+#board_container{
+    /*position: relative;*/
+}
+
+.icon_appear{
+    
+    position: absolute;
+    left: 60%;
+    top: 40%;
+    animation: appear 0.5s ease-in forwards;
+
+}
+
+@keyframes appear {
+    from {  transform: scale(0.5); 
+            filter: brightness(90%);
+            opacity:1;}
+    to {    transform: scale(4); 
+            filter: brightness(150%);
+            opacity:0;}
+}
+
+#score_container{
+    font-family: Courier New;
+    font-size: 80px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+#score{
+    text-align: center;
+}
+
+.score_inc{
+    font-family: Courier New;
+    font-size: 80px;
+    padding-top: 50px;
+    text-align: center;
+    position: absolute;
+    color: green;
+    left: 55%;
+    top: 30%;
+    animation: appear 1s ease-in forwards;
+}
+
+.score_dec{
+    font-family: Courier New;
+    font-size: 80px;
+    padding-top: 50px;
+    text-align: center;
+    position: absolute;
+    color: red;
+    left: 50%;
+    top: 30%;
+    animation: appear 1s ease-in forwards;
+}
+
